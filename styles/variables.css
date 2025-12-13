@@ -1,1 +1,20 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+@import url(../fonts/fonts.css);
+
+:root {
+    --accent-font: "press start";
+    --def-font: "inter";
+    --def-font-def_weight: 415;
+    --def-font-accent_weight: 715;
+    --background-gradient: 
+    repeating-linear-gradient(to right, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
+    linear-gradient(to bottom, #e7e7e7 0,#e7e7e7 0.01%, #1a1a1a 100%);
+    --gap-between-elems: 50px;
+    --blocks-width: clamp(375px, calc(260.563px + 30.516vw), 700px);;
+    --body-padding: 100px clamp(0px, calc(-130.282px + 34.742vw), 370px);
+    --blocks-border: 2px solid #000;
+    --card_description-padding: 25px 25px 88px;
+    --countour-color: #000;
+    --sparks-color: #ff0000;
+    --animation-fill-color: #ff0000;
+}
