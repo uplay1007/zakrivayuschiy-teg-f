@@ -20,8 +20,8 @@
   align-items: center;
   justify-content: center;
   gap: 95px;
-  font-family: var(--def-font), sans-serif;
-  font-variation-settings: "wght" var(--def-font-def_weight);
+  font-family: var(--defualt-font), sans-serif;
+  font-variation-settings: "wght" var(--defualt-font-def_weight);
   background-image: var(--background-gradient);
   background-size: cover;
   background-attachment: fixed;
@@ -33,7 +33,8 @@
   color: #000;
   background-color: #fff;
   font-size: 14px;
-  font-family: var(--accent-font), sans-serif;
+  font-family: var(--accent-font), fantasy;
+  cursor: pointer;
 }
 
 .button::before {
@@ -49,7 +50,7 @@
 
 .button:hover::before {
   transform: scaleX(1);  
-  color: #fff;    /* заливка растянулась */
+  color: #fff;   
 }
 
 .button:focus-visible {
@@ -72,15 +73,16 @@
   gap: 20px;
 }
 
-.html-tag {
+.logo-tag {
   font-size: clamp(3.06rem, calc(2.710rem + 1.502vw), 4.06rem);
 }
 
-.html-tag_text {
+.logo-tag_text {
   font-size: clamp(0.88rem, calc(0.677rem + 0.845vw), 1.44rem);
+  text-transform: uppercase;
 }
 
-.main-section {
+.section {
   inline-size: var(--blocks-width);
   display: flex;
   flex-direction: column;
@@ -88,7 +90,7 @@
   gap: var(--gap-between-elems);
 }
 
-.cards_sp {
+.cards {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,8 +104,7 @@
 }
 
 .card__heading {
-  block-size: clamp(30px, calc(59.746px - 2.066vw), 52px);
-  font-variation-settings: "wght" var(--def-font-accent_weight);
+  font-variation-settings: "wght" var(--defualt-font-accent_weight);
   font-size: 18px;
   padding: 5px 10px;
   color: #000;
@@ -114,13 +115,55 @@
   overflow: hidden;
 }
 
-.bus_image {
+.image {
   display: block;
-  inline-size: clamp(371px, calc(256.563px + 30.516vw), 696px);
-  block-size: clamp(371px, calc(256.563px + 30.516vw), 696px);
+  object-fit: cover;
+  aspect-ratio: 1/1;
 }
 
-.card__html-label {
+.image__acid-neon {
+  filter:
+    saturate(3.5);
+}
+
+.image__blur {
+  filter:
+    blur(22px)
+    saturate(1.1);
+}
+
+.image__inverse {
+  filter: invert(1) contrast(0.5);
+}
+
+.image__old {
+  filter:
+    sepia(0.95)
+    saturate(0.75)
+    contrast(1.05)
+    brightness(0.9);
+}
+
+.image__vintage {
+  filter: brightness(1) grayscale(0.7) contrast(0.9);
+}
+
+.image__retro-night {
+  filter: brightness(0.95) hue-rotate(35deg);
+}
+
+.image__old-red {
+  filter: 
+  brightness(0.92) 
+  contrast(0.43) 
+  saturate(2.72) 
+  hue-rotate(95.4deg) 
+  sepia(0.16) 
+  grayscale(0.16) 
+  invert(0.03);
+}
+
+.card__lable-on-image {
   position: absolute;
   inset-block-start: 25px; 
   inset-inline-end: 25px;
@@ -238,7 +281,7 @@ body:has(.save__dialog[open]) {
 }
 
 .dialog__text {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
   text-transform: uppercase;
   line-height: 1.5;
@@ -256,12 +299,16 @@ body:has(.save__dialog[open]) {
   padding: 12px 132px;
 }
 
+.close__button span {
+  text-transform: uppercase;
+}
+
 .core, .main-body {
   fill: transparent;
 }
 
 .contour {
-  transition: fill 1s linear;
+  transition: fill 0.1s linear;
 }
 
 .core {
@@ -279,7 +326,7 @@ body:has(.save__dialog[open]) {
 
 .like-icon:hover .core {
   fill: #000;
-  transition-delay: none;
+  transition-delay:0s;
 }
 
 .like-icon:hover .main-body {
@@ -325,7 +372,7 @@ body:has(.save__dialog[open]) {
 }
 
 @supports (-webkit-text-stroke: 1px #fff) {
-  .card__html-label {
+  .card__lable-on-image {
     -webkit-text-stroke: 1px #fff;
     text-shadow: none;
   }
