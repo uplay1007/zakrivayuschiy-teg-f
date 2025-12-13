@@ -1,3 +1,1 @@
-https://uplay1007.github.io/zakrivayuschiy-teg-f/
-
-check now
+https://github.com/uplay1007/zakrivayuschiy-teg-f
