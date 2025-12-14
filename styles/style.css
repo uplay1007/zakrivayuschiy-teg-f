@@ -116,6 +116,7 @@
 }
 
 .image {
+  inline-size: 100%;
   display: block;
   object-fit: cover;
   aspect-ratio: 1/1;
