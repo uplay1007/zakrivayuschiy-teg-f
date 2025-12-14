@@ -5,7 +5,7 @@
   font-display: swap;
   src:
     url("./Inter-Variable.woff2") format("woff2"),
-    url("./Inter-Variable.woff2") format("woff2-variations");
+    url("./Inter-Variable.woff2") format("woff2 supports variations"");
 }
 
 @font-face {
